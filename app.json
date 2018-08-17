@@ -1,0 +1,33 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/coming/coming",
+    "pages/detail/detail"
+  ],
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#268dcd",
+    "borderStyle": "white",
+    "backgroundColor": "#fafafa",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/ing.png",
+        "selectedIconPath": "image/ing-active.png",
+        "text": "正在热映"
+      },
+      {
+        "pagePath": "pages/coming/coming",
+        "iconPath": "image/coming.png",
+        "selectedIconPath": "image/coming-active.png",
+        "text": "即将上映"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#268dcd",
+    "navigationBarTitleText": "查影视",
+    "navigationBarTextStyle": "white"
+  }
+}
