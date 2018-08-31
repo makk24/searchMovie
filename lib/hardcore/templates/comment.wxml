@@ -1,0 +1,25 @@
+<template name="comment">
+    <view class="comment">
+        <view class="grid-left user-avatar">
+            <navigator class="cover" url="/pages/user/userinfo?id={{user.id}}">
+                <image src="{{user.avatar}}"></image>
+            </navigator>
+        </view>
+        <view class="grid-right">
+            <view class="username">
+                <text>{{user.name}}</text>
+            </view>
+            <view class="time">
+                <text>{{comment.create_time}}</text>
+            </view>
+            <view class="ref-comment" wx:if="{{comment.ref_comment}}">
+                <view class="content">
+                    <text>{{comment.ref_comment.text}}</text>
+                </view>
+            </view>
+            <view class="content">
+                <text>{{comment.text}}</text>
+            </view>
+        </view>
+    </view>
+</template>

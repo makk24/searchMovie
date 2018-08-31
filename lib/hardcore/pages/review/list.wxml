@@ -1,0 +1,10 @@
+<import src="/lib/hardcore/templates/review"></import>
+<view class="container">
+    <view class="reviews">
+        <view class="list-container">
+            <template is="review" data="{{review:review,user:review.user,mode:'in_list'}}" wx:for="{{review_list.items}}" wx:for-item="review" wx:key="{{review.id}}"></template>
+        </view>
+    </view>
+    <view class="loading" wx:if="{{loading.review_list}}"></view>
+    <view class="hasmore" wx:if="{{review_list.hasmore}}"></view>
+</view>

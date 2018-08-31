@@ -1,0 +1,78 @@
+.short-comments .comment {
+    display: flex;
+    padding: 20rpx 0;
+}
+
+.short-comments .comment .user-avatar .cover {
+    width: 72rpx;
+    height: 72rpx;
+    border-radius: 36rpx;
+    overflow: hidden;
+}
+
+.short-comments .comment .username {
+    font-size: 30rpx;
+    color: #353535;
+}
+
+.short-comments .comment .is-followed {
+    display: inline-block;
+    font-size: 16rpx;
+    color: white;
+    background-color: #42BD56;
+    padding: 5rpx 8rpx;
+    margin: 0 5rpx;
+    border-radius: 4rpx;
+    vertical-align: middle;
+}
+
+.short-comments .comment .time {
+    font-size: 28rpx;
+    color: #aaa;
+}
+
+.short-comments .comment .score {
+    display: inline-block;
+    margin: 0 8rpx;
+}
+
+.short-comments .comment .content {
+    font-size: 30rpx;
+    color: #353535;
+    line-height: 44rpx;
+    padding-top: 10rpx;
+}
+
+.short-comments .comment .grid-left {
+    width: 92rpx;
+    flex-shrink: 0;
+}
+
+.short-comments .comment .subject-info {
+    display: flex;
+    width: 550rpx;
+    border: 1rpx solid #D8D8D8;
+    border-radius: 4rpx;
+}
+
+.short-comments .comment .subject-info .grid-left {
+    width: 216rpx;
+    flex-shrink: 0;
+}
+
+.short-comments .comment .subject-info .subject-avatar .cover {
+    margin: 30rpx;
+    width: 150rpx;
+    height: 210rpx;
+}
+
+.short-comments .comment .subject-info .title {
+    font-size: 32rpx;
+    color: #494949;
+    margin-top: 30rpx;
+}
+
+.short-comments .comment .subject-info .info {
+    font-size: 26rpx;
+    color: #AAAAAA;
+}

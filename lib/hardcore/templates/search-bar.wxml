@@ -1,0 +1,10 @@
+<template name="search-button">
+    <view class="search-bar">
+        <view class="form">
+            <navigator class="input-area mock-input-area" url="/lib/hardcore/pages/search/search?type={{type}}">
+                <view class="search-icon"></view>
+                <view class="search-hint">搜索</view>
+            </navigator>
+        </view>
+    </view>
+</template>

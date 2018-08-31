@@ -1,4 +1,4 @@
-<view class="container film-detail">
+<view class="container1 film-detail">
   <view class="film-item">
       <view class="film-image">
         <image src="{{film.images.medium}}"></image>

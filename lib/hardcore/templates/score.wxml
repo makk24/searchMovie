@@ -1,0 +1,16 @@
+<template name="rating">
+    <view class="score score-{{size}}">
+        <view class="rating-stars" wx:if="{{rating.count>0}}">
+            <view class="rating-star rating-star-{{star}}" wx:for="{{rating.stars}}" wx:for-item="star" wx:key="{{index}}"></view>
+        </view>
+        <text class="score-num" wx:if="{{rating.count>0}}">{{rating.value}}</text>
+        <text class="null-reason" wx:if="{{rating.null_reason}}">{{rating.null_reason}}</text>
+    </view>
+</template>
+<template name="stars">
+    <view class="score score-{{size}}">
+        <view class="rating-stars">
+            <view class="rating-star rating-star-{{star}}" wx:for="{{stars}}" wx:for-item="star" wx:key="{{index}}"></view>
+        </view>
+    </view>
+</template>

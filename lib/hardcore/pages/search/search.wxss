@@ -1,0 +1,36 @@
+@import "../../../../__wuBaseWxss__/0.wxss";
+
+@import "../../../../__wuBaseWxss__/5.wxss";
+
+@import "../../../../__wuBaseWxss__/7.wxss";
+
+.container .column .column-title {
+    height: 70rpx;
+    line-height: 70rpx;
+    background-color: #F9F9F9;
+    font-size: 26rpx;
+    color: #9E9E9E;
+    padding: 0 40rpx;
+}
+
+.container .column .items-container {
+    background-color: white;
+}
+
+.container .column .items-container .item {
+    height: 88rpx;
+    line-height: 88rpx;
+    font-size: 28rpx;
+    color: #494949;
+    padding-left: 40rpx;
+    border-bottom: 1rpx solid #EDEDED;
+}
+
+.container .history .column-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .search-results .items-container {
+    background-color: white;
+}

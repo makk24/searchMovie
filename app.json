@@ -1,8 +1,17 @@
 {
   "pages":[
+    "lib/hardcore/pages/subject/subject-list",
+    "lib/hardcore/pages/subject/subject-list1",
     "pages/index/index",
     "pages/coming/coming",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "lib/hardcore/pages/search/search",
+    "pages/logs/logs",
+    "pages/subject/subject",
+    "lib/hardcore/pages/short-comment/list",
+    "lib/hardcore/pages/review/list",
+    "lib/hardcore/pages/review/detail"
+    
   ],
   "tabBar": {
     "color": "#666",
@@ -11,16 +20,16 @@
     "backgroundColor": "#fafafa",
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "iconPath": "image/ing.png",
-        "selectedIconPath": "image/ing-active.png",
-        "text": "正在热映"
-      },
-      {
-        "pagePath": "pages/coming/coming",
+        "pagePath": "lib/hardcore/pages/subject/subject-list",
         "iconPath": "image/coming.png",
         "selectedIconPath": "image/coming-active.png",
-        "text": "即将上映"
+        "text": "近期上映"
+      },
+      {
+        "pagePath": "lib/hardcore/pages/subject/subject-list1",
+        "iconPath": "image/ing.png",
+        "selectedIconPath": "image/ing-active.png",
+        "text": "热门电影"
       }
     ]
   },

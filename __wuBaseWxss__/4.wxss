@@ -1,0 +1,86 @@
+.score .score-num {
+    padding-left: 10rpx;
+}
+
+.score .score-num,.score .null-reason {
+    color: #AAAAAA;
+}
+
+.score .score-count {
+    color: #B3B3B3;
+}
+
+.score .rating-stars {
+    display: inline-block;
+}
+
+.score .rating-stars .rating-star {
+    display: inline-block;
+    margin-left: 2rpx;
+}
+
+.score .rating-stars .rating-star:first-child {
+    margin-left: 0;
+}
+
+.score .rating-stars .rating-star-full {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240"><path d="M 47 234,120 8,193 234,1 94,239 94z" fill="#feb631" /></svg>');
+}
+
+.score .rating-stars .rating-star-half {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240"><linearGradient id="grad" x1="0" x2="100%" y1="0" y2="0"><stop offset="50%" stop-color="#feb631" /><stop offset="50%" stop-color="#e5e5e5" /></linearGradient><path d="M 47 234,120 8,193 234,1 94,239 94z" fill="url(#grad)" /></svg>');
+}
+
+.score .rating-stars .rating-star-gray {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240"><path d="M 47 234,120 8,193 234,1 94,239 94z" fill="#e5e5e5" /></svg>');
+}
+
+.score-small {
+    font-size: 22rpx;
+}
+
+.score-small .rating-stars .rating-star {
+    width: 20rpx;
+    height: 20rpx;
+    background-size: 20rpx;
+}
+
+.score-medium {
+    font-size: 27rpx;
+}
+
+.score-medium .rating-stars .rating-star {
+    width: 24rpx;
+    height: 24rpx;
+    background-size: 25rpx;
+}
+
+.score-large {
+    font-size: 32rpx;
+}
+
+.score-large .rating-stars {
+    margin-left: 15rpx;
+}
+
+.score-large .rating-stars .rating-star {
+    width: 30rpx;
+    height: 30rpx;
+    background-size: 30rpx;
+    margin-left: 4rpx;
+}
+
+.score-large .score-num {
+    font-size: 42rpx;
+}
+
+.score-large .score-count,.score-large .null-reason {
+    padding-left: 16rpx;
+}
+
+.score-super-large .rating-stars .rating-star {
+    width: 60rpx;
+    height: 60rpx;
+    background-size: 60rpx;
+    margin-left: 8rpx;
+}

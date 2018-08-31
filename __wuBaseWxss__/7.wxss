@@ -1,0 +1,156 @@
+@import "4.wxss";
+
+.subject {
+    width: 5em;
+}
+
+.subject .cover {
+    width: 5em;
+    height: 7em;
+    overflow: hidden;
+}
+
+.subject .info {
+    padding: 12rpx 0;
+}
+
+.subject .info .title {
+    font-size: 28rpx;
+    font-weight: bold;
+    color: #353535;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.subject .info .score {
+    margin-top: 8rpx;
+}
+
+.subject-short {
+    display: flex;
+    height: 112rpx;
+    border-bottom: 1rpx solid #EDEDED;
+    padding: 16rpx 15rpx;
+}
+
+.subject-short .cover {
+    width: 80rpx;
+    height: 112rpx;
+    padding: 0 15rpx;
+}
+
+.subject-short .info .title {
+    font-size: 30rpx;
+    color: #1F1F1F;
+    font-weight: bold;
+}
+
+.subject-short .info .description {
+    font-size: 22rpx;
+    color: #B3B3B3;
+}
+
+.subject-column {
+    padding-bottom: 30rpx;
+}
+
+.subject-column .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30rpx;
+    height: 45rpx;
+    line-height: 45rpx;
+    position: relative;
+}
+
+.subject-column .header .title {
+    font-size: 30rpx;
+    color: #494949;
+    font-weight: bold;
+}
+
+.subject-column .header .right-button {
+    font-size: 28rpx;
+    color: #05B512;
+    line-height: 40rpx;
+}
+
+.subject-column .header .right-button .right-icon {
+    display: inline-block;
+    width: 12rpx;
+    height: 12rpx;
+    margin: 2rpx 6rpx;
+    line-height: 40rpx;
+    vertical-align: middle;
+    margin-left: 4rpx;
+    border-right: solid 1rpx #42BD56;
+    border-bottom: solid 1rpx #42BD56;
+    transform: rotate(-45deg);
+}
+
+.subject-column .header .left-icon {
+    position: absolute;
+    top: 36rpx;
+    left: 0;
+    width: 6rpx;
+    height: 32rpx;
+    background-color: #42BD56;
+}
+
+.subject-column .loading:before,.subject-column .loading:after {
+    background-color: #FFFFFF;
+}
+
+.items-container .empty-hint {
+    font-size: 28rpx;
+    color: #AAAAAA;
+    text-align: center;
+    width: 100%;
+}
+
+.items-container.horizontal-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30rpx 10rpx 0;
+}
+.m-top{
+  margin-top: 88rpx; 
+}
+.items-container.horizontal-wrap .item {
+    font-size: 40rpx;
+    width: 33.3%;
+}
+
+.items-container.horizontal-wrap .item .subject {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.items-container.horizontal-wrap[data-columns="4"] .item {
+    font-size: 24rpx;
+    width: 25%;
+}
+
+.items-container.horizontal {
+    display: flex;
+    overflow-y: scroll;
+    padding: 0 18rpx;
+}
+
+.items-container.horizontal .item {
+    font-size: 40rpx;
+    padding: 0 12rpx;
+}
+
+.book-app .subject-column .header .left-icon {
+    background-color: #B69879;
+}
+
+.book-app .subject-column .header .right-button {
+    color: #B69879;
+}
+
+.book-app .subject-column .header .right-button .right-icon {
+    border-color: #B69879;
+}

@@ -1,0 +1,39 @@
+<template name="short-comment">
+    <view class="comment">
+        <view class="grid-left user-avatar">
+            <navigator class="cover" url="/pages/user/userinfo?id={{user.id}}">
+                <image src="{{user.avatar}}"></image>
+            </navigator>
+        </view>
+        <view class="grid-right">
+            <view class="grid-right-top">
+                <text class="username">{{user.name}}</text>
+                <text class="is-followed" wx:if="{{user.followed}}">好友</text>
+                <template is="stars" data="{{size:'medium',stars:comment.rating.stars}}"></template>
+            </view>
+            <view class="grid-right-row2">
+                <text class="time">{{comment.create_time}}</text>
+            </view>
+            <view class="grid-right-main">
+                <text class="content">{{comment.comment}}</text>
+            </view>
+            <navigator class="subject-info" url="{{subject.url}}" wx:if="{{subject}}">
+                <view class="grid-left subject-avatar">
+                    <view class="cover">
+                        <image src="{{subject.avatar}}"></image>
+                    </view>
+                </view>
+                <view class="grid-right">
+                    <view class="title">
+                        <text>{{subject.name}}</text>
+                    </view>
+                    <template is="rating" data="{{rating:subject.rating,size:'medium'}}"></template>
+                    <view class="info">
+                        <view wx:for="{{subject.short_info_list}}" wx:for-item="info" wx:key="{{info.key}}">{{info.content}}</view>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+</template>
+<import src="score"></import>

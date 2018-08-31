@@ -1,0 +1,33 @@
+<template name="subject-short">
+    <navigator class="subject-wrap" data-id="{{subject.id}}" data-type="{{subject.type}}" url="{{subject.url}}">
+        <view class="subject-short">
+            <view class="cover">
+                <image src="{{subject.avatar}}"></image>
+            </view>
+            <view class="info">
+                <view>
+                    <text class="title">{{subject.name}}</text>
+                </view>
+                <view>
+                    <text class="description">{{subject.short_description}}</text>
+                </view>
+            </view>
+        </view>
+    </navigator>
+</template>
+<template name="subject">
+    <navigator class="subject-wrap" data-id="{{subject.id}}" data-type="{{subject.type}}" url="{{subject.url}}">
+        <view class="subject">
+            <view class="cover">
+                <image src="{{subject.avatar}}"></image>
+            </view>
+            <view class="info">
+                <view class="title">
+                    <text>{{subject.name}}</text>
+                </view>
+                <template is="rating" data="{{rating:subject.rating,size:'small'}}"></template>
+            </view>
+        </view>
+    </navigator>
+</template>
+<import src="score"></import>

@@ -1,0 +1,28 @@
+@import "../../../../__wuBaseWxss__/0.wxss";
+
+@import "../../../../__wuBaseWxss__/4.wxss";
+
+@import "../../../../__wuBaseWxss__/6.wxss";
+
+@import "../../../../__wuBaseWxss__/2.wxss";
+
+.container .sort-selector {
+    display: flex;
+}
+
+.container .sort-selector .sort-option {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 30rpx;
+    padding: 24rpx 0;
+    border-bottom: solid 1rpx #ededed;
+}
+
+.container .sort-selector .sort-option.active {
+    color: #42BD56;
+    border-bottom: solid 4rpx #42BD56;
+}
+
+.container .short-comments {
+    padding: 10rpx 36rpx;
+}

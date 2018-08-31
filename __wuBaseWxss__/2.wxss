@@ -1,0 +1,13 @@
+.loading {
+    width: 40rpx;
+    height: 40rpx;
+    background-image: url(https://img3.doubanio.com/f/talion/326df52f00a7dd43b9d23e2bbc7b7d3de5b9fd9e/pics/card/loading_green.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: 0 auto;
+}
+
+.hasmore {
+    height: 5em;
+}

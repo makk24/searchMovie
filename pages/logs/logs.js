@@ -10,5 +10,11 @@ Page({
         return util.formatTime(new Date(log))
       })
     })
+    wx.request({
+      url: 'https://m.douban.com/rexxar/api/v2/search/hots?type=movie&app_version=5.0.0',
+      success:function(res){
+        console.log(res)
+      }
+    })
   }
 })

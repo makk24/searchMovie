@@ -1,0 +1,35 @@
+<import src="/lib/hardcore/templates/score"></import>
+<import src="/lib/hardcore/templates/comment"></import>
+<view class="container">
+    <view class="column review" wx:if="{{review.id}}">
+        <view class="title">
+            <text>{{review.title}}</text>
+        </view>
+        <view class="user">
+            <view class="avatar">
+                <image src="{{review.user.avatar}}"></image>
+            </view>
+            <view class="name">
+                <text>{{review.user.name}}</text>
+            </view>
+            <template is="stars" data="{{size:'medium',stars:review.rating.stars}}"></template>
+        </view>
+        <view class="numbers">
+            <view>{{review.useful_count}}有用</view>
+            <view>{{review.comments_count}}回复</view>
+        </view>
+        <view class="content">
+            <text>{{review.content}}</text>
+        </view>
+    </view>
+    <view class="column comments">
+        <view class="column-title">
+            <text>回应({{comment_list.total}})</text>
+        </view>
+        <view class="list-container">
+            <template is="comment" data="{{comment:comment,user:comment.author}}" wx:for="{{comment_list.items}}" wx:for-item="comment" wx:key="{{comment.id}}"></template>
+        </view>
+        <view class="loading" wx:if="{{loading.comment_list}}"></view>
+        <view class="hasmore" wx:if="{{comment_list.hasmore}}"></view>
+    </view>
+</view>

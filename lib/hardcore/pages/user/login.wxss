@@ -1,0 +1,42 @@
+@import "../../../../__wuBaseWxss__/0.wxss";
+
+page {
+    height: 100%;
+}
+
+.container {
+    padding: 60rpx 40rpx;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.container .weixin-user button {
+    margin-top: 90rpx;
+}
+
+.container .login-btn {
+    margin-top: 30rpx;
+    font-size: 30rpx;
+    color: #AAAAAA;
+    text-align: center;
+}
+
+.container .user-info {
+    width: 144rpx;
+    margin: 30rpx auto 0;
+}
+
+.container .user-info .cover {
+    width: 144rpx;
+    height: 144rpx;
+    border-radius: 72rpx;
+    overflow: hidden;
+    border: solid 1rpx #dfdfdf;
+}
+
+.container .user-info .username {
+    margin-top: 36rpx;
+    text-align: center;
+    font-size: 36rpx;
+    color: #494949;
+}

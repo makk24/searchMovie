@@ -1,0 +1,62 @@
+@import "../../../../__wuBaseWxss__/0.wxss";
+
+@import "../../../../__wuBaseWxss__/4.wxss";
+
+.title {
+    height: 84rpx;
+    line-height: 84rpx;
+    text-align: center;
+    border-bottom: solid #42BD56 1rpx;
+}
+
+.title text {
+    font-size: 36rpx;
+    color: #42BD56;
+}
+
+.title[data-type=book] {
+    border-bottom-color: #B69879;
+}
+
+.title[data-type=book] text {
+    color: #B69879;
+}
+
+.container {
+    padding: 30rpx;
+    background-color: white;
+}
+
+.container .rating .hint {
+    text-align: center;
+    font-size: 24rpx;
+    color: #B3B3B3;
+}
+
+.container .rating .score {
+    margin: 24rpx 0 60rpx;
+    text-align: center;
+}
+
+.container .comment form {
+    display: block;
+}
+
+.container .comment form textarea {
+    margin: 0 auto;
+    width: 682rpx;
+    height: 360rpx;
+    border: 2rpx solid #B3B3B3;
+    border-radius: 10rpx;
+}
+
+.container .comment form button {
+    width: 670rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin-top: 50rpx;
+}
+
+.container[data-type=book] .comment form button {
+    background-color: #7EC081;
+}

@@ -1,0 +1,51 @@
+.container {
+    background-color: #F9F9F9;
+}
+
+.column-container {
+    background-color: #F9F9F9;
+}
+
+.column-container .column {
+    background-color: #FFFFFF;
+    margin-top: 20rpx;
+}
+
+.column-container .column:first-child {
+    margin-top: 0;
+}
+
+.body {
+    padding: 40rpx;
+}
+
+.block {
+    padding: 10rpx 20rpx;
+}
+
+image {
+    width: 100%;
+    height: 100%;
+}
+
+button::after {
+    content: none;
+}
+
+.mock-btn:active {
+    background-color: #eee;
+}
+
+.grid-container {
+    display: flex;
+}
+
+.grid-container .grid-fixed-col {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.grid-container .grid-col {
+    flex-grow: 1;
+    flex-shrink: 1;
+}

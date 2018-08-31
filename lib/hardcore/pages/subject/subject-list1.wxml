@@ -1,0 +1,12 @@
+<import src="/lib/hardcore/templates/search-bar"></import>
+<import src="/lib/hardcore/templates/subject"></import>
+<view class="container">
+    <template is="search-button" data="{{type:type}}" wx:if="{{type&&type!='book'}}"></template>
+    <view class="items-container horizontal-wrap m-top">
+        <view class="item" wx:for="{{subject_list.items}}" wx:for-item="subject" wx:key="{{subject.id}}">
+            <template is="subject" data="{{subject:subject}}"></template>
+        </view>
+    </view>
+    <view class="loading" wx:if="{{loading.subject_list}}"></view>
+    <view class="hasmore" wx:if="{{subject_list.hasmore}}"></view>
+</view>

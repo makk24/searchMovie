@@ -1,0 +1,22 @@
+<template name="review">
+    <navigator class="review" url="/lib/hardcore/pages/review/detail?id={{review.id}}">
+        <view class="title">
+            <text>{{review.title}}</text>
+        </view>
+        <view class="info">
+            <view class="user-avatar" wx:if="{{mode=='in_list'}}">
+                <view class="cover">
+                    <image src="{{user.avatar}}"></image>
+                </view>
+            </view>
+            <view class="username">
+                <text>{{user.name}}</text>
+            </view>
+            <template is="stars" data="{{size:'medium',stars:review.rating.stars}}"></template>
+            <view class="useful-count" wx:if="{{mode=='in_column'}}">
+                <text>{{review.useful_count}}有用</text>
+            </view>
+        </view>
+    </navigator>
+</template>
+<import src="score"></import>

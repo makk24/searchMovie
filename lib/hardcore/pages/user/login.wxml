@@ -1,0 +1,28 @@
+<view class="container">
+    <view class="column need-login" wx:if="{{!login}}">
+        <view class="weixin-user">
+            <view class="user-info">
+                <view class="cover">
+                    <image src="{{weixin_user.avatarUrl}}"></image>
+                </view>
+                <view class="username">
+                    <text>{{weixin_user.nickName}}</text>
+                </view>
+            </view>
+            <button bindtap="onWeixinLoginClicked" type="primary">使用微信账号登录</button>
+        </view>
+        <view bindtap="onLoginClicked" class="login-btn">豆瓣账号登录</view>
+    </view>
+    <view class="column user-info" wx:if="{{login}}">
+        <view class="user">
+            <view class="user-info">
+                <view class="cover">
+                    <image src="{{user.avatar}}"></image>
+                </view>
+                <view class="username">
+                    <text>{{user.name}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

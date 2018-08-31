@@ -1,0 +1,39 @@
+<import src="/lib/hardcore/templates/subject"></import>
+<view class="container">
+    <view class="search-bar">
+        <view class="form">
+            <view class="search-icon"></view>
+            <input bindconfirm="onSearchConfirm" bindinput="onSearchInput" class="input-area" confirmType="search" focus="{{focus}}" name="search" placeholder="搜索" type="text" value="{{search}}"></input>
+            <view bindtap="onCancelSearchClicked" class="cancel-btn">取消</view>
+        </view>
+    </view>
+    <view class=' m-top'></view>
+    <view class="column history" wx:if="{{results.length==0&&history.length>0}}">
+        <view class="column-title">
+            <view>
+                <text>历史记录</text>
+            </view>
+            <view bindtap="onClearHistoryClicked" class="clearbtn">清除</view>
+        </view>
+        <view class="items-container">
+            <view bindtap="onHistoryItemClicked" class="item" data-word="{{word}}" wx:for="{{history}}" wx:for-item="word" wx:key="{{word}}">
+                <view>{{word}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="column hot-words" wx:if="{{results.length==0&&hot_words.length>0}}">
+        <view class="column-title">热门搜索</view>
+        <view class="items-container">
+            <navigator class="item" url="/pages/subject/subject?type={{word.type}}&id={{word.id}}" wx:for="{{hot_words}}" wx:for-item="word" wx:key="{{word.id}}">
+                <view>{{word.name}}</view>
+            </navigator>
+        </view>
+    </view>
+    <view class="search-results" wx:if="{{results.length>0}}">
+        <view class="items-container">
+            <view bindtap="onSearchItemClicked" class="item" wx:for="{{results}}" wx:for-item="subject" wx:key="{{subject.id}}">
+                <template is="subject-short" data="{{subject:subject}}"></template>
+            </view>
+        </view>
+    </view>
+</view>

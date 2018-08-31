@@ -1,0 +1,49 @@
+.reviews .review {
+    padding: 32rpx 0;
+    border-bottom: solid 1rpx #E5E5E5;
+}
+
+.reviews .review:last-child {
+    border-bottom: none;
+}
+
+.reviews .review .title {
+    font-weight: bold;
+    font-size: 36rpx;
+    color: #353535;
+}
+
+.reviews .review .info {
+    margin-top: 18rpx;
+}
+
+.reviews .review .info>view {
+    display: inline-block;
+    margin-left: 8rpx;
+}
+
+.reviews .review .info>view:first-child {
+    margin-left: 0;
+}
+
+.reviews .review .info .user-avatar {
+    vertical-align: middle;
+}
+
+.reviews .review .info .user-avatar .cover {
+    width: 32rpx;
+    height: 32rpx;
+    border-radius: 16rpx;
+    overflow: hidden;
+}
+
+.reviews .review .info .username {
+    font-size: 30rpx;
+    color: #353535;
+}
+
+.reviews .review .info .useful-count {
+    display: inline-block;
+    font-size: 24rpx;
+    color: #B3B3B3;
+}

@@ -1,0 +1,11 @@
+@import "../../../../__wuBaseWxss__/0.wxss";
+
+@import "../../../../__wuBaseWxss__/3.wxss";
+
+@import "../../../../__wuBaseWxss__/4.wxss";
+
+@import "../../../../__wuBaseWxss__/2.wxss";
+
+.container {
+    padding: 0 30rpx;
+}

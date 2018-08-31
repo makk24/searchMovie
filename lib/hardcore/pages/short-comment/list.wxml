@@ -1,0 +1,14 @@
+<import src="/lib/hardcore/templates/short-comment"></import>
+<view class="container">
+    <view class="sort-selector">
+        <view bindtap="onSortOptionClicked" class="sort-option mock-btn {{sort=='latest'?'active':''}}" data-sort="latest">最新短评</view>
+        <view bindtap="onSortOptionClicked" class="sort-option mock-btn {{sort=='hot'?'active':''}}" data-sort="hot">最热短评</view>
+    </view>
+    <view class="short-comments">
+        <view class="list-container" wx:if="{{comment_list.items.length>0}}">
+            <template is="short-comment" data="{{comment:comment,user:comment.user}}" wx:for="{{comment_list.items}}" wx:for-item="comment" wx:key="{{comment.id}}"></template>
+        </view>
+        <view class="loading" wx:if="{{loading.comment_list}}"></view>
+        <view class="hasmore" wx:if="{{comment_list.hasmore}}"></view>
+    </view>
+</view>

@@ -1,0 +1,44 @@
+<template name="userinfo">
+    <view class="column-container">
+        <view class="column profile" data-gender="{{user.info.gender}}" data-has-banner="{{user.ui.has_banner}}" data-is-me="{{user.info.is_me}}" style="{{user.ui.profile_style}}">
+            <view class="mask">
+                <view class="avatar">
+                    <image src="{{user.info.avatar}}"></image>
+                </view>
+                <view class="username">
+                    <text>{{user.info.name}}</text>
+                </view>
+                <view class="buttons-wrap follow" wx:if="{{showFollow}}">
+                    <view class="hint" wx:if="{{user.info.followed}}">已关注</view>
+                    <button bindtap="onFollowClicked" class="btn" data-action="follow" wx:else>关注</button>
+                </view>
+                <view class="corner-btn-wrap" wx:if="{{user.ui.showLogout}}">
+                    <button bindtap="onCornerBtnClicked" class="btn" data-action="logout">退出</button>
+                </view>
+                <view class="corner-btn-wrap" wx:if="{{user.ui.showLogin}}">
+                    <button bindtap="onCornerBtnClicked" class="btn" data-action="login">登录</button>
+                </view>
+            </view>
+        </view>
+        <view class="column subject-column" wx:if="{{column.show}}" wx:for="{{user.interest_columns}}" wx:for-item="column" wx:key="{{column.status}}">
+            <view class="header">
+                <view class="title">{{column.title}} ({{column.data.total}})</view>
+                <navigator class="right-button" url="/lib/hardcore/pages/subject/subject-list?mode=user_interests&user_id={{user.info.id}}&status={{column.status}}&&type={{type}}" wx:if="{{column.data.total>0}}">更多</navigator>
+            </view>
+            <view class="items-container horizontal">
+                <view class="item" wx:for="{{column.data.subjects}}" wx:for-item="subject" wx:key="{{subject.id}}">
+                    <template is="subject" data="{{subject:subject}}"></template>
+                </view>
+                <view class="empty-hint" wx:if="{{column.data.total==0}}">该用户暂无{{column.title}}电影</view>
+            </view>
+        </view>
+        <view class="column short-comments" wx:if="{{user.comments.length>0}}">
+            <view class="column-title">短评</view>
+            <view class="list-container">
+                <template is="short-comment" data="{{comment:comment,user:user.info,subject:comment.subject}}" wx:for="{{user.comments}}" wx:for-item="comment" wx:key="{{comment.id}}"></template>
+            </view>
+        </view>
+    </view>
+</template>
+<import src="subject"></import>
+<import src="short-comment"></import>

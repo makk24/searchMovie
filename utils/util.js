@@ -15,7 +15,13 @@ function formatNumber(n) {
   n = n.toString()
   return n[1] ? n : '0' + n
 }
-
+const url_prefix = {
+  MOBILE: "https://" + "m.douban.com" + "/rexxar/api",
+  ACCOUNTS: "https://" + "accounts.douban.com",
+  FRODO_V2: "https://" + "frodo.douban.com" + "/api/v2",
+  MOVIE_V2: "https://" + "movie.douban.com" + "/api/v2"
+};
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  url_prefix
 }

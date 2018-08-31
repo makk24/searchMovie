@@ -1,0 +1,5 @@
+@import "register.wxss";
+
+.sent-hint {
+    font-size: 12px;
+}

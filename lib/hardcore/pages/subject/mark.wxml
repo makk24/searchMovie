@@ -1,0 +1,19 @@
+<view class="title" data-type="{{type}}">
+    <text>{{action_name}}</text>
+</view>
+<view class="container" data-type="{{type}}">
+    <view class="rating" wx:if="{{need_rating}}">
+        <view class="hint">点击星星评分</view>
+        <view class="score score-super-large">
+            <view class="rating-stars">
+                <view bindtap="onStarClicked" class="rating-star rating-star-{{star.color}}" data-rating="{{star.rating}}" wx:for="{{stars}}" wx:for-item="star" wx:key="{{star.rating}}"></view>
+            </view>
+        </view>
+    </view>
+    <view class="comment">
+        <form bindsubmit="onCommentFormSubmit">
+            <textarea name="comment" placeholder="记录一下{{action_name}}的理由" value="{{comment}}"></textarea>
+            <button bindtap="onSubmitClicked" class="submit-btn" data-action="{{action}}" data-id="{{id}}" data-rating="{{rating}}" data-type="{{type}}" formType="submit" type="primary">确定</button>
+        </form>
+    </view>
+</view>

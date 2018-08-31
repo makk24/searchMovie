@@ -53,7 +53,7 @@ Page({
       console.log(res.target)
     }
     return {
-      title: '查影视，热映大片快捷预览',
+      title: '查影视，热映大片快捷预览及豆瓣影评',
       path: '/pages/index/index',
       success: function (res) {
         // 转发成功

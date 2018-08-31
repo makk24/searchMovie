@@ -1,0 +1,119 @@
+@import "../../../../__wuBaseWxss__/0.wxss";
+
+@import "../../../../__wuBaseWxss__/4.wxss";
+
+@import "../../../../__wuBaseWxss__/2.wxss";
+
+.comments .comment {
+    display: flex;
+    padding: 30rpx 0;
+}
+
+.comments .comment .user-avatar .cover {
+    width: 72rpx;
+    height: 72rpx;
+    border-radius: 36rpx;
+    overflow: hidden;
+}
+
+.comments .comment .username {
+    font-size: 30rpx;
+    color: #353535;
+}
+
+.comments .comment .time {
+    font-size: 24rpx;
+    color: #B3B3B3;
+    margin-top: 12rpx;
+}
+
+.comments .comment .ref-comment {
+    border-left: solid 4rpx #42BD56;
+    padding: 0 20rpx;
+    margin-top: 20rpx;
+}
+
+.comments .comment .ref-comment .content {
+    margin-top: 0;
+}
+
+.comments .comment .content {
+    font-size: 30rpx;
+    color: #494949;
+    line-height: 44rpx;
+    margin-top: 20rpx;
+    word-break: break-all;
+}
+
+.comments .comment .grid-left {
+    width: 92rpx;
+    flex-shrink: 0;
+}
+
+.container {
+    padding: 30rpx;
+}
+
+.container .review .title {
+    font-size: 42rpx;
+    color: #494949;
+    font-weight: bold;
+}
+
+.container .review .user {
+    margin-top: 24rpx;
+}
+
+.container .review .user>view {
+    display: inline-block;
+    margin-left: 8rpx;
+}
+
+.container .review .user>view:first-child {
+    margin-left: 0;
+}
+
+.container .review .user .avatar {
+    width: 32rpx;
+    height: 32rpx;
+    border-radius: 16rpx;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.container .review .user .name {
+    font-size: 30rpx;
+    color: #353535;
+}
+
+.container .review .numbers {
+    margin-top: 24rpx;
+}
+
+.container .review .numbers>view {
+    display: inline-block;
+    margin-left: 16rpx;
+    font-size: 30rpx;
+    color: #B3B3B3;
+}
+
+.container .review .numbers>view:first-child {
+    margin-left: 0;
+}
+
+.container .review .content {
+    margin-top: 24rpx;
+    font-size: 34rpx;
+    color: #353535;
+    line-height: 44rpx;
+    word-break: break-all;
+}
+
+.container .comments {
+    margin-top: 72rpx;
+}
+
+.container .comments .column-title {
+    font-size: 30rpx;
+    color: #B3B3B3;
+}

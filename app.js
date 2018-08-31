@@ -1,5 +1,9 @@
 //app.js
+const util = require('./utils/util');
 App({
+  requestApi:require("./utils/requestComm"),
+  util : require('./utils/util'),
+  urlType: util.url_prefix,
   onLaunch: function (options) {
     console.log(options)
     if (options.referrerInfo) {
@@ -36,5 +40,11 @@ App({
 
   globalData: {
     userInfo: null
+  },
+  onShare: function (title, path ='lib/hardcore/pages/subject/subject-list'){
+    return {
+      title: title,
+      path: path
+    }
   }
 })

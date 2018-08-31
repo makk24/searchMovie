@@ -1,0 +1,232 @@
+@import "../../__wuBaseWxss__/0.wxss";
+
+@import "../../__wuBaseWxss__/4.wxss";
+
+@import "../../__wuBaseWxss__/6.wxss";
+
+@import "../../__wuBaseWxss__/3.wxss";
+
+.back-cover {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 360rpx;
+}
+
+.back-cover .back-mask {
+    background-color: rgba(0,0,0,0.75);
+}
+
+.back-cover .cover {
+    width: 200rpx;
+    height: 280rpx;
+}
+
+.back-cover .title {
+    font-size: 42rpx;
+    color: #FFFFFF;
+    line-height: 54rpx;
+    width: 460rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.back-cover .title text {
+    white-space: nowrap;
+}
+
+.back-cover .score {
+    text-align: initial;
+    margin-top: 12rpx;
+}
+
+.back-cover .score .score-num {
+    color: #FFFFFF;
+    padding-left: 0;
+    font-size: 72rpx;
+}
+
+.back-cover .score .score-right {
+    padding-left: 15rpx;
+    padding-top: 7rpx;
+}
+
+.back-cover .score .score-count {
+    font-size: 26rpx;
+    margin-top: 3rpx;
+    color: #9B9B9B;
+}
+
+.container {
+    padding: 33rpx 30rpx 62rpx;
+}
+
+.container .intro {
+    display: flex;
+}
+
+.container .intro .info {
+    font-size: 28rpx;
+    color: #353535;
+    line-height: 44rpx;
+    padding-right: 30rpx;
+}
+
+.container .intro .following-rating {
+    width: 200rpx;
+    flex-grow: 0;
+    flex-shrink: 0;
+    border-left: solid 1rpx #B0B0B0;
+}
+
+.container .intro .following-rating .score-num {
+    font-size: 61rpx;
+    color: #5F5F5F;
+    text-align: center;
+}
+
+.container .intro .following-rating .users .list-container {
+    text-align: center;
+}
+
+.container .intro .following-rating .users .user-avatar {
+    display: inline-block;
+    width: 40rpx;
+    height: 40rpx;
+    border-radius: 20rpx;
+    overflow: hidden;
+}
+
+.container .intro .following-rating .users .list-count {
+    font-size: 24rpx;
+    color: #9B9B9B;
+    text-align: center;
+}
+
+.container .mark-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.container .mark-buttons .button-wrapper {
+    flex-grow: 1;
+    flex-basis: 300rpx;
+}
+
+.container .mark-buttons .button-wrapper:not(:first-child) {
+    margin-left: 40rpx;
+}
+
+.container .mark-buttons button {
+    border: 2rpx solid #FFAC2E;
+    border-radius: 10rpx;
+    color: #FFAC2E;
+    font-size: 28rpx;
+    padding: 10rpx;
+    line-height: 40rpx;
+}
+
+.container .mark-buttons button.button-hover {
+    color: white;
+    background-color: #FFAC2E;
+}
+
+.container .synopsis .synopsis-content {
+    font-size: 30rpx;
+    color: #353535;
+    line-height: 44rpx;
+}
+
+.container .column {
+    padding-top: 42rpx;
+}
+
+.container .column .column-title {
+    font-size: 30rpx;
+    color: #B3B3B3;
+    line-height: 30rpx;
+    padding: 30rpx 0;
+}
+
+.container .column .more-btn {
+    text-align: center;
+    font-size: 30rpx;
+    color: #42BD56;
+    padding: 10rpx 0;
+}
+
+.container .column .review .title {
+    font-size: 34rpx;
+}
+
+.container .column .review .info {
+    margin-top: 12rpx;
+}
+
+.container .column .review .info .username {
+    font-size: 24rpx;
+}
+
+.container .short-comments .column-title {
+    padding-bottom: 10rpx;
+}
+
+.container .short-comments .unreleased-message {
+    height: 64rpx;
+    text-align: center;
+    line-height: 64rpx;
+    border-radius: 4px;
+    background-color: rgba(255,171,45,0.05);
+    border: solid 1rpx rgba(255,172,45,0.5);
+    font-size: 24rpx;
+    color: #494949;
+    margin: 40rpx 0;
+}
+
+.container .short-comments .list-container {
+    padding-bottom: 12rpx;
+}
+
+.container .reviews .column-title {
+    padding-bottom: 0;
+}
+
+.grid-row1 {
+    display: flex;
+}
+
+.grid-row1 .grid-row1-col1 {
+    width: 200rpx;
+    padding: 117rpx 30rpx 0;
+}
+
+.grid-row1 .grid-row1-col2 {
+    padding-top: 150rpx;
+    width: 460rpx;
+    overflow: hidden;
+}
+
+.bottom-float {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.bottom-float .button-wrapper button {
+    border-radius: 0;
+    color: white;
+    font-size: 30rpx;
+    height: 96rpx;
+    line-height: 96rpx;
+    background-color: #42BD56;
+}
+
+.bottom-float .button-wrapper button image {
+    height: 26rpx;
+    width: 26rpx;
+    margin-right: 16rpx;
+}
+
+.bottom-space {
+    height: 96rpx;
+}
