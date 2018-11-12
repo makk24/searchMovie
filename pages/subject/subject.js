@@ -10,7 +10,7 @@ let o = function(t) {
   }
   return t;
 };
-
+//let e = require("../../lib/hardcore/scripts/account");
 
 Page({
 
@@ -111,21 +111,7 @@ Page({
       });
   },
   onShow: function() {
-    var t, r, o, a, s, i;
-    return a = this.opts, r = a.id, i = a.type, o = this, e.getAccountInfo().then(function() {
-      return app.requestApi.request({
-          path: app.urlType.FRODO_V2 +"/" + i + "/" + r + "/interest",
-          loadingKey: "interest",
-          page: o
-        }).then(function(t) {
-          return o.updateMarkStatus(t.status);
-        });
-      }).catch(function(t) {
-        return o.updateMarkStatus("unmark");
-      }), t = getApp(), console.log("subject on show. app scene:", t.scene), s = 1036 === t.scene,
-      console.log("show launch app:", s), this.setData({
-        show_launch_app: s
-      });
+    
   },
   updateMarkStatus : function (t) {
     var e, n;
@@ -191,49 +177,12 @@ Page({
       title: "已看过"
     });
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function() {
-
+  showImg:function(e){
+    wx.previewImage({
+      current: this.data.movie.pic.large,
+      urls: [this.data.movie.pic.large],
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function() {
-
-  },
-
   /**
    * 用户点击右上角分享
    */

@@ -1,26 +1,14 @@
 //app.js
 const util = require('./utils/util');
 App({
-  requestApi:require("./utils/requestComm"),
-  util : require('./utils/util'),
+  requestApi: require("./utils/requestComm"),
+  util: require('./utils/util'),
   urlType: util.url_prefix,
-  onLaunch: function (options) {
+  onLaunch: function(options) {
     console.log(options)
-    if (options.referrerInfo) {
-      wx.showModal({
-        title: 'onLaunch',
-        content: options.referrerInfo.extraData.foo,
-      })
-    }
   },
-  onShow: function (options) {
+  onShow: function(options) {
     console.log(options)
-    if (options.referrerInfo) {
-      wx.showModal({
-        title: 'onShow',
-        content: options.referrerInfo.extraData.foo,
-      })
-    }
   },
   getUserInfo: function(cb) {
     var that = this
@@ -37,11 +25,10 @@ App({
       })
     }
   },
-
   globalData: {
     userInfo: null
   },
-  onShare: function (title, path ='lib/hardcore/pages/subject/subject-list'){
+  onShare: function(title, path = 'lib/hardcore/pages/subject/subject-list') {
     return {
       title: title,
       path: path

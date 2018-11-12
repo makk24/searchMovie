@@ -1,102 +1,102 @@
 <import src="/lib/hardcore/templates/short-comment"></import>
 <import src="/lib/hardcore/templates/review"></import>
 <view class="back-cover" style="background-image: url({{movie.pic.large}})" wx:if="{{movie.title}}">
-    <view class="back-mask grid-row1">
-        <view class="grid-row1-col1">
-            <view class="cover">
-                <image src="{{movie.pic.large}}"></image>
-            </view>
-        </view>
-        <view class="grid-row1-col2">
-            <view class="title">
-                <text>{{movie.title}}</text>
-            </view>
-            <view class="title" wx:if="{{movie.original_title}}">
-                <text>{{movie.original_title}}</text>
-            </view>
-            <view class="score score-medium grid-container" wx:if="{{movie.can_interact}}">
-                <view class="grid-fixed-col score-num" wx:if="{{movie.rating.count>0}}">
-                    <text>{{movie.rating.value}}</text>
-                </view>
-                <view class="grid-col score-right">
-                    <view class="rating-stars" wx:if="{{movie.rating.count>0}}">
-                        <view class="rating-star rating-star-{{star}}" wx:for="{{movie.rating.stars}}" wx:for-item="star" wx:key="{{index}}"></view>
-                    </view>
-                    <view class="score-count" wx:if="{{movie.rating.count>0}}">
-                        <text>{{movie.rating.count}}人评价</text>
-                    </view>
-                    <view class="null-reason" wx:if="{{movie.rating.null_reason}}">
-                        <text>{{movie.rating.null_reason}}</text>
-                    </view>
-                </view>
-            </view>
-        </view>
+  <view class="back-mask grid-row1">
+    <view class="grid-row1-col1">
+      <view class="cover">
+        <image bindtap='showImg' src="{{movie.pic.large}}"></image>
+      </view>
     </view>
+    <view class="grid-row1-col2">
+      <view class="title">
+        <text>{{movie.title}}</text>
+      </view>
+      <view class="title" wx:if="{{movie.original_title}}">
+        <text>{{movie.original_title}}</text>
+      </view>
+      <view class="score score-medium grid-container" wx:if="{{movie.can_interact}}">
+        <view class="grid-fixed-col score-num" wx:if="{{movie.rating.count>0}}">
+          <text>{{movie.rating.value}}</text>
+        </view>
+        <view class="grid-col score-right">
+          <view class="rating-stars" wx:if="{{movie.rating.count>0}}">
+            <view class="rating-star rating-star-{{star}}" wx:for="{{movie.rating.stars}}" wx:for-item="star" wx:key="{{index}}"></view>
+          </view>
+          <view class="score-count" wx:if="{{movie.rating.count>0}}">
+            <text>{{movie.rating.count}}人评价</text>
+          </view>
+          <view class="null-reason" wx:if="{{movie.rating.null_reason}}">
+            <text>{{movie.rating.null_reason}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
 </view>
 <view class="container">
-    <view class="column intro" wx:if="{{movie.rating}}">
-        <view class="info">
-            <view>
-                <text>{{movie.durations_str}} {{movie.genres_str}}</text>
-            </view>
-            <view>
-                <text>{{movie.pubdate_str}}上映 {{movie.countries_str}}</text>
-            </view>
-            <view>
-                <text>{{movie.actors_str}}</text>
-            </view>
-        </view>
-        <view class="following-rating" wx:if="{{following&&movie.can_interact}}">
-            <view class="score-num">{{following.value}}</view>
-            <view class="users">
-                <view class="list-container">
-                    <view class="user-avatar" wx:for="{{following.users}}" wx:for-item="user" wx:key="{{user.id}}">
-                        <image src="{{user.avatar}}"></image>
-                    </view>
-                </view>
-                <view class="list-count">
-                    <view>{{following.count}}个好友评分</view>
-                </view>
-            </view>
-        </view>
+  <view class="column intro" wx:if="{{movie.rating}}">
+    <view class="info">
+      <view>
+        <text>{{movie.durations_str}} {{movie.genres_str}}</text>
+      </view>
+      <view>
+        <text>{{movie.pubdate_str}}上映 {{movie.countries_str}}</text>
+      </view>
+      <view>
+        <text>{{movie.actors_str}}</text>
+      </view>
     </view>
-    <!-- wx:if="{{movie.id&&movie.can_interact}}" -->
-    <view class="column mark-buttons" style="">
-    <view class="button-wrapper">
-            <button open-type='share' class="mark-btn" >分享给好友</button>
+    <view class="following-rating" wx:if="{{following&&movie.can_interact}}">
+      <view class="score-num">{{following.value}}</view>
+      <view class="users">
+        <view class="list-container">
+          <view class="user-avatar" wx:for="{{following.users}}" wx:for-item="user" wx:key="{{user.id}}">
+            <image src="{{user.avatar}}"></image>
+          </view>
         </view>
-        <!-- <view class="button-wrapper" wx:for="{{mark_btns}}" wx:for-item="btn" wx:key="{{btn.action}}">
+        <view class="list-count">
+          <view>{{following.count}}个好友评分</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- wx:if="{{movie.id&&movie.can_interact}}" -->
+  <view class="column mark-buttons" style="" wx:if="{{movie.id}}">
+    <view class="button-wrapper">
+      <button open-type='share' class="mark-btn">分享给好友</button>
+    </view>
+    <!-- <view class="button-wrapper" wx:for="{{mark_btns}}" wx:for-item="btn" wx:key="{{btn.action}}">
             <button bindtap="onMarkButtonClicked" class="mark-btn" data-action="{{btn.action}}" data-id="{{movie.id}}" data-type="{{movie.type}}">{{btn.name}}</button>
         </view> -->
+  </view>
+  <view class="column synopsis" wx:if="{{movie.intro}}">
+    <view class="column-title">{{movie.title}}的剧情简介</view>
+    <view class="synopsis-content">
+      <text>{{movie.intro}}</text>
     </view>
-    <view class="column synopsis" wx:if="{{movie.intro}}">
-        <view class="column-title">{{movie.title}}的剧情简介</view>
-        <view class="synopsis-content">
-            <text>{{movie.intro}}</text>
-        </view>
+  </view>
+  <view class="column short-comments" wx:if="{{short_comment.items.length&&movie.can_interact}}">
+    <view class="column-title">短评({{short_comment.total}})</view>
+    <view class="unreleased-message" wx:if="{{!movie.is_released}}">本片尚未上映，以下是想看用户写的短评</view>
+    <view class="list-container">
+      <template is="short-comment" data="{{comment:comment,user:comment.user}}" wx:for="{{short_comment.items}}" wx:for-item="comment" wx:key="{{comment.id}}"></template>
     </view>
-    <view class="column short-comments" wx:if="{{short_comment.items.length&&movie.can_interact}}">
-        <view class="column-title">短评({{short_comment.total}})</view>
-        <view class="unreleased-message" wx:if="{{!movie.is_released}}">本片尚未上映，以下是想看用户写的短评</view>
-        <view class="list-container">
-            <template is="short-comment" data="{{comment:comment,user:comment.user}}" wx:for="{{short_comment.items}}" wx:for-item="comment" wx:key="{{comment.id}}"></template>
-        </view>
-        <navigator class="more-btn" url="/lib/hardcore/pages/short-comment/list?type={{movie.type}}&id={{movie.id}}">查看更多短评</navigator>
+    <navigator class="more-btn" url="/lib/hardcore/pages/short-comment/list?type={{movie.type}}&id={{movie.id}}">查看更多短评</navigator>
+  </view>
+  <view class="column reviews" wx:if="{{review.items.length&&movie.can_interact}}">
+    <view class="column-title">影评({{review.total}})</view>
+    <view class="list-container">
+      <template is="review" data="{{review:review,user:review.user,mode:'in_column'}}" wx:for="{{review.items}}" wx:for-item="review" wx:key="{{review.id}}"></template>
     </view>
-    <view class="column reviews" wx:if="{{review.items.length&&movie.can_interact}}">
-        <view class="column-title">影评({{review.total}})</view>
-        <view class="list-container">
-            <template is="review" data="{{review:review,user:review.user,mode:'in_column'}}" wx:for="{{review.items}}" wx:for-item="review" wx:key="{{review.id}}"></template>
-        </view>
-        <navigator class="more-btn" url="/lib/hardcore/pages/review/list?type={{movie.type}}&id={{movie.id}}">查看更多影评</navigator>
-    </view>
+    <navigator class="more-btn" url="/lib/hardcore/pages/review/list?type={{movie.type}}&id={{movie.id}}">查看更多影评</navigator>
+  </view>
 </view>
 <view class="bottom-float open-app-buttons" wx:if="{{movie.id&&show_launch_app}}">
-    <view class="button-wrapper">
-        <button appParameter="douban://douban.com/{{movie.type}}/{{movie.id}}" binderror="launchAppError" class="open-app-btn" openType="launchApp">
-            <image src="/assets/subject/launch-app.png"></image>
-            <text>打开豆瓣 App</text>
-        </button>
-    </view>
+  <view class="button-wrapper">
+    <button appParameter="douban://douban.com/{{movie.type}}/{{movie.id}}" binderror="launchAppError" class="open-app-btn" openType="launchApp">
+      <image src="/assets/subject/launch-app.png"></image>
+      <text>打开豆瓣 App</text>
+    </button>
+  </view>
 </view>
 <view class="bottom-space" wx:if="{{movie.id&&show_launch_app}}"></view>
