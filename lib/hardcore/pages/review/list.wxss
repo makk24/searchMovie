@@ -1,10 +1,10 @@
-@import "../../../../__wuBaseWxss__/0.wxss";
+@import "../../../../wuBaseWxss/0.wxss";
 
-@import "../../../../__wuBaseWxss__/3.wxss";
+@import "../../../../wuBaseWxss/3.wxss";
 
-@import "../../../../__wuBaseWxss__/4.wxss";
+@import "../../../../wuBaseWxss/4.wxss";
 
-@import "../../../../__wuBaseWxss__/2.wxss";
+@import "../../../../wuBaseWxss/2.wxss";
 
 .container {
     padding: 0 30rpx;

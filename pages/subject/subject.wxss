@@ -1,10 +1,10 @@
-@import "../../__wuBaseWxss__/0.wxss";
+@import "../../wuBaseWxss/0.wxss";
 
-@import "../../__wuBaseWxss__/4.wxss";
+@import "../../wuBaseWxss/4.wxss";
 
-@import "../../__wuBaseWxss__/6.wxss";
+@import "../../wuBaseWxss/6.wxss";
 
-@import "../../__wuBaseWxss__/3.wxss";
+@import "../../wuBaseWxss/3.wxss";
 
 .back-cover {
     background-size: cover;

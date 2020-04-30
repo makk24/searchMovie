@@ -1,8 +1,8 @@
-@import "../../../../__wuBaseWxss__/0.wxss";
+@import "../../../../wuBaseWxss/0.wxss";
 
-@import "../../../../__wuBaseWxss__/4.wxss";
+@import "../../../../wuBaseWxss/4.wxss";
 
-@import "../../../../__wuBaseWxss__/2.wxss";
+@import "../../../../wuBaseWxss/2.wxss";
 
 .comments .comment {
     display: flex;

@@ -9,6 +9,18 @@ App({
   },
   onShow: function(options) {
     console.log(options)
+    wx.login({
+      success(res) {
+        wx.request({
+          url: `https://makunkun.cn/wx/getUser?appid=wx6f8db60e5cc9d60b&code=${res.code}`,
+          success(res) {
+            if (res.data.openid) {
+            }
+          }
+        })
+      }
+    })
+
   },
   getUserInfo: function(cb) {
     var that = this

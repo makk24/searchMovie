@@ -16,7 +16,7 @@
     </navigator>
 </template>
 <template name="subject">
-    <navigator class="subject-wrap" data-id="{{subject.id}}" data-type="{{subject.type}}" url="{{subject.url}}">
+    <view class="subject-wrap" catchtap="gotoDetail_sup" data-id="{{subject.id}}" data-type="{{subject.type}}" data-url="{{subject.url}}">
         <view class="subject">
             <view class="cover">
                 <image src="{{subject.avatar}}"></image>
@@ -28,6 +28,6 @@
                 <template is="rating" data="{{rating:subject.rating,size:'small'}}"></template>
             </view>
         </view>
-    </navigator>
+    </view>
 </template>
 <import src="score"></import>

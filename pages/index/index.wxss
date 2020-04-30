@@ -1,11 +1,11 @@
 /**index.wxss**/
-@import "../../__wuBaseWxss__/0.wxss";
+@import "../../wuBaseWxss/0.wxss";
 
-@import "../../__wuBaseWxss__/5.wxss";
+@import "../../wuBaseWxss/5.wxss";
 
-@import "../../__wuBaseWxss__/7.wxss";
+@import "../../wuBaseWxss/7.wxss";
 
-@import "../../__wuBaseWxss__/2.wxss";
+@import "../../wuBaseWxss/2.wxss";
 .userinfo {
   display: flex;
   flex-direction: column;
