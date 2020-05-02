@@ -1,6 +1,7 @@
 //app.js
 const util = require('./utils/util');
 App({
+  config: require('./utils/config.js'),
   requestApi: require("./utils/requestComm"),
   util: require('./utils/util'),
   urlType: util.url_prefix,
